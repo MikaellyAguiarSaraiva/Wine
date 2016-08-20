@@ -82,13 +82,16 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>1</td>
-							<td><a href="#">Vinã Amalia Das Fincas Malbec</a></td>
-							<td>Tinto</td>
-							<td>2013</td>
-							<td>750ml</td>
-							<td>R$55,00</td>
+						<tr th:each="vinho : ${vinhos}">
+							<td th:text="${vinho.codigo}">1</td>
+							<td><a href="#"  th:text="${vinho.nome}">Vinã Amalia Das Fincas Malbec</a></td>
+							<td th:text="${vinho.tipo}">Tinto</td>
+							<td th:text="${vinho.safra}">2013</td>
+							<td th:text="${vinho.volume}">750ml</td>
+							<td th:text="${vinho.valor}">R$55,00</td>
+						</tr>
+						<tr th:if="${vinhos.empty}">
+							<td colspan="6">Nenhum vinho cadastrado</td>
 						</tr>
 					</tbody>
 				</table>

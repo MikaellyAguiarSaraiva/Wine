@@ -1,0 +1,8 @@
+CREATE TABLE vinho ( 
+	codigo SERIAL PRIMARY KEY,
+	nome VARCHAR(50) NOT NULL,
+	tipo VARCHAR(50) NOT NULL,
+	safra INTEGER NOT NULL,
+	volume INTEGER NOT NULL,
+	valor REAL NOT NULL
+);
