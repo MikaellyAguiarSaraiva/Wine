@@ -4,17 +4,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/produtos")
-public class ProdutosController {
-
-	@RequestMapping("/novo")
-	public String novo() {
-		return "/produto/CadastroProduto";
-	}
-	
+@RequestMapping("/vinhos")
+public class VinhosController {
+	 
 	@RequestMapping
 	public String pesquisa() {
-		return "/produto/PesquisaProdutos";
+		return "/vinho/ListagemVinhos";
 	}
 	
+	@RequestMapping("/novo")
+	public String novo() {
+		return "/vinho/CadastroProduto";
+	}
 }
